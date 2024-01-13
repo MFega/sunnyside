@@ -19,6 +19,14 @@
     box-sizing: border-box;
 }
 
+p{
+    font-size: 18px;
+}
+
+
+h2{
+    font-size: 30px;
+}
 .header{
     padding: 30px;
     width: 100vw;
@@ -133,12 +141,17 @@ label #cancel{
     line-height: 25px;
 }
 
-.content-3,.content-4{
-    position: relative;
-    width: 100%;
+
+.content-3{
+    background: url("./sunnyside-agency-landing-page-main/images/desktop/image-graphic-design.jpg")center/cover no-repeat;
 }
 
-.content-3 img,.content-4 img{
+.content-4{
+    background: url("./sunnyside-agency-landing-page-main/images/desktop/image-photography.jpg")center/cover no-repeat;
+}
+
+.content-3,.content-4{
+    position: relative;
     width: 100%;
 }
 
@@ -237,7 +250,7 @@ label #cancel{
     .header{
         padding: 30px;
         width: 100vw;
-        height: 90vh;
+        height: 70vh;
         background: url("./sunnyside-agency-landing-page-main/images/desktop/image-header.jpg") center/cover no-repeat;
     }
     
@@ -292,7 +305,7 @@ label #cancel{
     }
 
     .creative h1{
-        margin: 70px 0 50px 0;
+        margin: 60px 0 50px 0;
     }
     
 
@@ -303,13 +316,21 @@ label #cancel{
         grid-template-columns: repeat(2, 1fr);
     }
 
+
     .content-3,.content-4{
         position: relative;
         width: 100%;
-        
+        height: 500px;
+        text-align: center;
     }
 
-     
+    .content-2{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+    }
+
     .contents .content:nth-of-type(1){
         order: 2;
     }
@@ -335,6 +356,11 @@ label #cancel{
     }
 
     /* **************TESTIMONY************ */
+
+    .testimony{
+        margin: 50px 50px 80px;
+    }
+
 .testimony-item{
    
     display: grid;
@@ -370,5 +396,154 @@ label #cancel{
 
     
 }
+
+
+@media screen and (min-width:1024px){
+    .header{
+        padding: 30px;
+        width: 100vw;
+        height: 70vh;
+        background: url("./sunnyside-agency-landing-page-main/images/desktop/image-header.jpg") center/cover no-repeat;
+    }
+    
+    .intro{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-bar{
+        background: none;
+        width: initial;
+        height: initial;
+        padding: 0;
+        display: flex;
+        top: 0;
+        left: 0;
+        transform: none;
+        position: initial;   
+        
+    }
+    
+    .triangle{
+      display: none;
+    }
+
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-bar ul li{
+        padding-top: 0;
+        padding-left: 25px;
+    }
+    
+    
+    .nav-bar ul li a{
+        color: white;
+    }
+    
+    .nav-bar button{
+         background:white;
+         margin-top: 0;
+         margin-left: 25px;
+    }
+    
+    
+    label #btn,label #cancel{
+        display: none;
+    }
+
+    .creative h1{
+        margin: 60px 0 50px 0;
+    }
+    
+
+    /* ****************CONTENT*************** */
+
+    .contents{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-3,.content-4{
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+
+    .content-2{
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         text-align: left;
+    } 
+
+    .contents .content:nth-of-type(1){
+        order: 2;
+    }
+
+    .contents .content:nth-of-type(2){
+        order: 1;
+    }
+
+    .contents .content:nth-of-type(3){
+        order: 3;
+    }
+
+    .contents .content:nth-of-type(4){
+        order: 4;
+    }
+
+    .contents .content:nth-of-type(5){
+        order: 5;
+    }
+
+    .contents .content:nth-of-type(6){
+        order: 6;
+    }
+
+    /* **************TESTIMONY************ */
+    .testimony{
+        margin: 50px 50px 80px;
+    }
+    
+.testimony-item{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+}
+
+/* ***********************IMAGES**************** */
+.images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+ }
+
+ .images .img img{
+    width: 100%;
+ }
+
+/* *******************FOOTER************* */
+
+.links ul{
+    justify-content: center;
+ }
+
+ .links ul li{
+    padding-left: 40px;
+ }
+
+ .links ul li:nth-child(1){
+    padding-left: 0;
+ }
+
+
+    
+}
+
 
 
