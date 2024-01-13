@@ -13,6 +13,8 @@
 - White: hsl(0, 0%, 100%)
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -21,12 +23,17 @@
 
 p{
     font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
 }
 
 
 h2{
     font-size: 30px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
 }
+
 .header{
     padding: 30px;
     width: 100vw;
@@ -49,6 +56,7 @@ h2{
     transform: translate(-50%,-50%);
     position: fixed;   
     display: none;
+    z-index: 111111111;
 }
 
 .triangle{
@@ -71,7 +79,8 @@ h2{
 .nav-bar ul li a{
     text-decoration: none;
     color: hsl(210, 4%, 67%);
-    
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
     display: block;
 }
 
@@ -81,6 +90,8 @@ h2{
      border-radius: 25px;
      border: none;
      margin-top: 30px;
+     font-family: 'Barlow', sans-serif;
+    font-weight: 600;
 }
 
 #check{
@@ -116,9 +127,11 @@ label #cancel{
 .creative h1{
     color: white;
     letter-spacing: 3px;
-    margin: 100px 0 50px 0;
+    margin: 150px 0 50px 0;
     font-size: 40px;
     text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
 }
 
 
@@ -136,11 +149,57 @@ label #cancel{
     margin: 70px 30px;
 }
 
+.content-2 h2{
+    color: hsl(212, 27%, 19%);
+}
+
 .content-2 p{
     margin: 20px 0;
     line-height: 25px;
+    color: hsl(213, 9%, 39%);
 }
 
+.content-2 h5{
+    color: hsl(212, 27%, 19%);
+    font-family: 'Fraunces', serif;
+}
+
+.learn-1{
+    position: relative;
+}
+
+.learn-1::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    border-radius: 20px;
+    background: hsl(51, 100%, 49%);
+    bottom: 0;
+    left: -2px;
+    z-index: -11111;
+}
+
+.learn-2{
+    position: relative;
+}
+
+.learn-2::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    border-radius: 20px;
+    background: hsl(7, 99%, 70%);
+    bottom: 0;
+    left: -2px;
+    z-index: -11111;
+   
+}
+
+.learn-1:hover,.learn-2:hover{
+    cursor: pointer;
+}
 
 .content-3{
     background: url("./sunnyside-agency-landing-page-main/images/desktop/image-graphic-design.jpg")center/cover no-repeat;
@@ -153,12 +212,14 @@ label #cancel{
 .content-3,.content-4{
     position: relative;
     width: 100%;
+    height: 500px;
 }
 
 .graphics{
     position: absolute;
     top: 60%;
     padding: 30px;
+    color: hsl(167, 40%, 24%);
 }
 
 .graphics p,.photo P{
@@ -170,6 +231,7 @@ label #cancel{
     padding: 30px;
     position: absolute;
     top: 60%;
+    color: hsl(198, 62%, 26%);
 }
 
 /* **************TESTIMONY************ */
@@ -181,6 +243,8 @@ label #cancel{
 .title{
     margin: 20px 0 35px 0;
     color: hsl(210, 4%, 67%);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
 }
 
 .emily{
@@ -193,12 +257,21 @@ label #cancel{
     border-radius: 50%;
 }
 
+.emily h5{
+    color:hsl(212, 27%, 19%) ;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
 .emily p{
     margin: 20px 0;
+    color:hsl(213, 9%, 39%) ;
 }
 
 .emily h6{
     color: hsl(210, 4%, 67%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
 }
 
 
@@ -233,17 +306,25 @@ label #cancel{
 
  .links ul li{
     list-style-type: none;
-    /* padding-left: 40px; */
+     
  }
 
  .links ul li a{
     text-decoration: none;
     display: block;
     color:hsl(167, 40%, 24%) ;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
  }
 
- .icons img{
+ .icons .fa{
     margin-left: 15px;
+    color: hsl(167, 40%, 24%);
+    transition: all .2s linear;
+ }
+
+ .icons .fa:hover{
+    color: white;
  }
 
 @media screen and (min-width:768px) and (max-width:1024px){
@@ -297,6 +378,13 @@ label #cancel{
          background:white;
          margin-top: 0;
          margin-left: 25px;
+         transition: all .2s linear;
+    }
+
+    .nav-bar button:hover{
+        background:rgba(255, 255,255, 0.5);
+        color: white;
+        cursor: pointer;
     }
     
     
@@ -389,12 +477,19 @@ label #cancel{
     padding-left: 40px;
  }
 
+ .links ul li a{
+    transition: all .2s linear;
+ }
+
+ .links ul li a:hover{
+    color: white;
+    cursor: pointer;
+ }
+
  .links ul li:nth-child(1){
     padding-left: 0;
  }
 
-
-    
 }
 
 
@@ -449,6 +544,13 @@ label #cancel{
          background:white;
          margin-top: 0;
          margin-left: 25px;
+         transition: all .2s linear;
+    }
+
+    .nav-bar button:hover{
+        background:rgba(255, 255,255, 0.5);
+        color: white;
+        cursor: pointer;
     }
     
     
@@ -509,7 +611,7 @@ label #cancel{
     .testimony{
         margin: 50px 50px 80px;
     }
-    
+
 .testimony-item{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -537,12 +639,19 @@ label #cancel{
     padding-left: 40px;
  }
 
+ .links ul li a{
+    transition: all .2s linear;
+ }
+
+ .links ul li a:hover{
+    color: white;
+    cursor: pointer;
+ }
+
  .links ul li:nth-child(1){
     padding-left: 0;
  }
-
-
-    
+  
 }
 
 
