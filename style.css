@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 p{
     font-size: 18px;
     font-family: 'Barlow', sans-serif;
